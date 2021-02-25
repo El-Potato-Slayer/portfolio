@@ -1,0 +1,67 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.intro{
+  background: url(./images/starry-dark.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#particles-js{
+  padding-top: 57px;
+}
+
+.carousel{
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: block mandatory;
+  scroll-behavior: smooth
+}
+
+.article{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  scroll-snap-align: center;
+}
+
+p{
+  width: 60%;
+}
+
+.indicator-container{
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  height: max-content;
+  width: 0;
+}
+
+.indicator {
+  display: block;
+  position: relative;
+  width: 4px;
+  height: 32px;
+  background-color: rgb(145, 145, 145);
+  margin: 8px 0px;
+}
+
+.indicator::before{
+  content: '';
+  position: absolute;
+  left:-20px;
+  width:4px;
+  height: 32px;
+  padding: 0 32px;
+}
+
+.indicator--selected{
+  background-color: white;
+}
