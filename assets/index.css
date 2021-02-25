@@ -5,7 +5,7 @@
 }
 
 .intro{
-  background: url(./images/starry-dark.png);
+  background: url(./images/starry-dark-c.png);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -63,11 +63,6 @@
 }
 
 /* tabs */
-.tab-container{
-  /* width: 50%; */
-  /* z-index: 1; */
-}
-
 .tab{
   top: -32px;
   border: 1px solid gray;
