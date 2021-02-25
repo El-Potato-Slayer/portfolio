@@ -26,7 +26,7 @@ articles.forEach(function(article) {
 indicatorContainer.addEventListener('click', function(event) {
   indicatorContainer.childNodes.forEach(function(indicator, index) {
     if (indicator === event.target) {
-      indicatorIndex = index -1
+      indicatorIndex = index
     }
   })
   articles[indicatorIndex].scrollIntoView()
