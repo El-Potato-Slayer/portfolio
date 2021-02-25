@@ -1,14 +1,14 @@
-const articles = document.querySelectorAll(".article")
+const section = document.querySelectorAll(".section")
 const indicatorContainer = document.getElementsByClassName("indicator-container")[0]
 var indicatorIndex
 const options = { threshold: 0.5 }
 
-createIndicators(indicatorContainer, articles.length)
+createIndicators(indicatorContainer, section.length)
 
 // Observer to find section visible in viewport
 const observer = new IntersectionObserver(function(entries, observer) {
   entries.forEach(function(entry) {
-    indicatorIndex = [...articles].indexOf(entry.target)
+    indicatorIndex = [...section].indexOf(entry.target)
     if (entry.isIntersecting) {
       indicatorContainer.children[indicatorIndex].classList.add("indicator--selected")
     }
@@ -18,7 +18,7 @@ const observer = new IntersectionObserver(function(entries, observer) {
   })
 }, options)
 
-articles.forEach(function(article) {
+section.forEach(function(article) {
   observer.observe(article)
 })
 
@@ -29,14 +29,15 @@ indicatorContainer.addEventListener('click', function(event) {
       indicatorIndex = index
     }
   })
-  articles[indicatorIndex].scrollIntoView()
+  section[indicatorIndex].scrollIntoView()
 })
 
-// Creates indicators equal to the amount of articles
+// Creates indicators equal to the amount of section
 function createIndicators(container, indicatorAmount) {
   for (let index = 0; index < indicatorAmount; index++) {
     var span = document.createElement("span")
-    span.className = "indicator"
+    span.classList.add("indicator")
+    span.classList.add("cursor-pointer")
     container.appendChild(span)
   }
 }

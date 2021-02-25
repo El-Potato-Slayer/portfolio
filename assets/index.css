@@ -1,6 +1,7 @@
 *{
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .intro{
@@ -23,18 +24,12 @@
   scroll-behavior: smooth
 }
 
-.article{
+.section{
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
   scroll-snap-align: center;
 }
 
-p{
-  width: 60%;
-}
+/* Indicators */
 
 .indicator-container{
   position: fixed;
@@ -65,4 +60,109 @@ p{
 
 .indicator--selected{
   background-color: white;
+}
+
+/* tabs */
+.tab-container{
+  /* width: 50%; */
+  /* z-index: 1; */
+}
+
+.tab{
+  top: -32px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  width: 88px;
+  height: 40px;
+  transition: all 0.1s ease-in-out;
+  outline: none !important;
+}
+
+.tab:hover{
+  top: -38px;
+}
+
+.tab--active{
+  top: -38px
+}
+
+.tab-content{
+  z-index:1;
+  display: none;
+  border-top: 1px solid white;
+  align-items: center;
+}
+
+.tab-content--active[data-tab-content]{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 8px;
+
+}
+
+.rails{
+  left: calc(25% - 44px);
+}
+
+.react{
+  left: calc(50% - 44px);
+}
+
+.vue{
+  left: calc(75% - 44px);
+}
+
+.rails.tab--active{
+  box-shadow: 0 0 16px 2px  #FF0000,
+              inset 0 0 16px 2px  #FF0000;
+  border:1px solid #FF0000;
+}
+
+.react.tab--active{
+  box-shadow: 0 0 16px 2px  #00FFFF,
+              inset 0 0 16px 2px  #00FFFF;
+  border:1px solid #00FFFF;
+}
+
+.vue.tab--active{
+  box-shadow: 0 0 16px 2px  #00FF00,
+              inset 0 0 16px 2px  #00FF00;
+  border:1px solid #00FF00;
+}
+
+/* card */
+.c1{
+  background: url(./images/pic1.jpg);
+}
+
+.c2{
+  background: url(./images/pic2.jpg);
+}
+
+.c3{
+  background: url(./images/pic3.jpg);
+}
+
+.c4{
+  background: url(./images/pic4.jpg);
+}
+
+.c5{
+  background: url(./images/pic5.jpg);
+}
+
+.c6{
+  background: url(./images/pic6.jpg);
+}
+
+.c7{
+  background: url(./images/pic7.jpg);
+}
+
+.c8{
+  background: url(./images/pic8.jpg);
+}
+
+.c9{
+  background: url(./images/pic9.jpg);
 }

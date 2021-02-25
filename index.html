@@ -10,26 +10,83 @@
 </head>
 <body>
     
-  <nav class="text-white bg-transparent flex justify-end items-center py-4 px-16 border-b border-white fixed top-0 w-full z-10">
-    <a href="" class="px-4">Home</a>
-    <a href="" class="px-4">About me</a>
-    <a href="" class="px-4">My Work</a>
-    <a href="" class="px-4">Contact me</a>
-  </nav>
+  
 
   <main class="carousel">
 
-    <section class="article text-white flex flex-col justify-center items-center text-center intro relative">
+    <section class="section text-white flex flex-col justify-center items-center text-center intro relative">
+      <nav class="text-white bg-transparent flex justify-end items-center py-4 px-16 border-b border-white z-10 absolute top-0">
+        <a href="" class="px-4">Home</a>
+        <a href="" class="px-4">About me</a>
+        <a href="" class="px-4">My Work</a>
+        <a href="" class="px-4">Contact me</a>
+      </nav>
       <h1 class="text-6xl z-10">Whaddup, I'm Chad</h1>
       <p class="text-2xl z-10">I'm quite a sick web developer</p>
       <div id="particles-js" class="w-full absolute">
       </div>
     </section>
-    <section class="article bg-black text-white">
-      <h2>Two</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum itaque odit nihil error corporis quae iure pariatur quis debitis fuga possimus totam unde, eum odio optio provident, illo dolore asperiores.</p>
+    <section class="section bg-black text-white flex justify-center items-center">
+      <div class="tab-container w-3/6 h-3/5 relative">
+        <button data-tab-target="#rails-cards" class="tab tab--active rails absolute">Rails</button>
+        <button data-tab-target="#react-cards" class="tab react absolute">React</button>
+        <button data-tab-target="#vue-cards" class="tab vue absolute">Vue</button>
+
+        <div id="rails-cards" data-tab-content class="tab-content tab-content--active bg-black h-full w-full relative text-center">
+          <section class="card h-80">
+            <div class="bg-center bg-cover c1 h-72">
+            </div>
+            <p class="mt-4">Project 1</p>
+          </section>
+          <section class="card h-80">
+            <div class="bg-center bg-cover c2 h-72">
+            </div>
+            <p class="mt-4">Project 2</p>
+          </section>
+          <section class="card h-80">
+            <div class="bg-center bg-cover c3 h-72">
+            </div>
+            <p class="mt-4">Project 3</p>
+          </section>
+        </div>
+        <div id="react-cards" data-tab-content class="tab-content bg-black h-full w-full relative text-center">
+          <section class="card h-80">
+            <div class="bg-center bg-cover c4 h-72">
+            </div>
+            <p class="mt-4">Project 4</p>
+          </section>
+          <section class="card h-80">
+            <div class="bg-center bg-cover c5 h-72">
+            </div>
+            <p class="mt-4">Project 5</p>
+          </section>
+          <section class="card h-80">
+            <div class="bg-center bg-cover c6 h-72">
+            </div>
+            <p class="mt-4">Project 6</p>
+          </section>
+        </div>
+        <div id="vue-cards" data-tab-content class="tab-content bg-black h-full w-full relative text-center">
+          <section class="card h-80">
+            <div class="bg-center bg-cover c7 h-72">
+            </div>
+            <p class="mt-4">Project 7</p>
+          </section>
+          <section class="card h-80">
+            <div class="bg-center bg-cover c8 h-72">
+            </div>
+            <p class="mt-4">Project 8</p>
+          </section>
+          <section class="card h-80">
+            <div class="bg-center bg-cover c9 h-72">
+            </div>
+            <p class="mt-4">Project 9</p>
+          </section>
+        </div>
+
+      </div>
     </section>
-    <section class="article bg-black text-white">
+    <section class="section bg-black text-white">
       <h2>Three</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum itaque odit nihil error corporis quae iure pariatur quis debitis fuga possimus totam unde, eum odio optio provident, illo dolore asperiores.</p>
     </section>
@@ -39,7 +96,8 @@
   </main>
 
   <script src="./js/carousel.js"></script>
+  <script src="./js/tab.js"></script>
   <script src="./js/particles.js"></script>
-  <script src="js/app.js"></script>
+  <script src="./js/app.js"></script>
 </body>
 </html>
